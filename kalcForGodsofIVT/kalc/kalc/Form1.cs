@@ -26,46 +26,57 @@ namespace kalc
         private void multiplication_Click(object sender, EventArgs e)
         {
 
-            double argument1 = Convert.ToDouble(arg1.Text);
-            double argument2 = Convert.ToDouble(arg2.Text);
-
-            double temp_result = argument1*argument2;
-
-            result.Text = temp_result.ToString();
+            math_operations(sender);
 
         }
 
         private void division_Click(object sender, EventArgs e)
         {
-            double argument1 = Convert.ToDouble(arg1.Text);
-            double argument2 = Convert.ToDouble(arg2.Text);
-
-            double temp_result = argument1 / argument2;
-
-            result.Text = temp_result.ToString();
+            math_operations(sender);
         }
 
         private void subraction_Click(object sender, EventArgs e)
         {
-            double argument1 = Convert.ToDouble(arg1.Text);
-            double argument2 = Convert.ToDouble(arg2.Text);
-
-            double temp_result = argument1 - argument2;
-
-            result.Text = temp_result.ToString();
+            math_operations(sender);
         }
 
         private void addition_Click(object sender, EventArgs e)
         {
-            double argument1 = Convert.ToDouble(arg1.Text);
-            double argument2 = Convert.ToDouble(arg2.Text);
-
-            double temp_result = argument1 + argument2;
-
-            result.Text = temp_result.ToString();
+            math_operations(sender);
         }
 
 
+
+
+        private void math_operations(object sender)
+        {
+            double argument1 = Convert.ToDouble(arg1.Text);
+            double argument2 = Convert.ToDouble(arg2.Text);
+
+            double temp_result = 0;
+
+            switch (( (Button)sender).Name )
+            {
+                case "addition":
+                    temp_result = argument1 + argument2; break;
+
+                case "division":
+                    temp_result = argument1 / argument2; break;
+
+                case "multiplication": 
+                    temp_result = argument1 * argument2; break;
+
+                case "subraction": 
+                    temp_result = argument1 - argument2; break;
+
+                default:
+                    throw new Exception("unknown operation");
+
+            }
+
+
+            result.Text = temp_result.ToString();
+        }
 
 
     }

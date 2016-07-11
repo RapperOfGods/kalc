@@ -53,26 +53,12 @@ namespace kalc
             double argument1 = Convert.ToDouble(arg1.Text);
             double argument2 = Convert.ToDouble(arg2.Text);
 
-            double temp_result = 0;
 
-            switch (( (Button)sender).Name )
-            {
-                case "addition":
-                    temp_result = argument1 + argument2; break;
+            String name = ((Button) sender).Name;
+            I_Two_arguments_calculator calculator = Two_arguments_calculator_factory.Create_calculator(name);
 
-                case "division":
-                    temp_result = argument1 / argument2; break;
+            double temp_result = calculator.Calculate(argument1, argument2);
 
-                case "multiplication": 
-                    temp_result = argument1 * argument2; break;
-
-                case "subraction": 
-                    temp_result = argument1 - argument2; break;
-
-                default:
-                    throw new Exception("unknown operation");
-
-            }
 
 
             result.Text = temp_result.ToString();

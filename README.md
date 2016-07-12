@@ -1,3 +1,3 @@
 # kalc
-azazaz lalochka
+AzazazLalochka
 # kek

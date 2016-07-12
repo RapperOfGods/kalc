@@ -1,7 +1,7 @@
 ﻿
 namespace kalc.CalculatorsWithTwoArguments
 {
-    class Multiplication: ITwoArgumentsCalculator
+    public class Multiplication: ITwoArgumentsCalculator
     {
         public double Calculate(double first, double second)
         {

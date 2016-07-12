@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace kalc
+namespace kalc.CalculatorsWithTwoArguments
 {
-    public static class Two_arguments_calculator_factory
+    public static class TwoArgumentsCalculatorFactory
     {
-        public static I_Two_arguments_calculator Create_calculator(String calculator_name)
+        public static ITwoArgumentsCalculator Create_calculator(String calculator_name)
         {
 
             switch (calculator_name)
@@ -21,12 +21,22 @@ namespace kalc
                 case "subraction":
                     return new Subruction();
 
+                case "log":
+                    return new Log();
+
+                case "max":
+                    return new Max();
+
+                case "min":
+                    return new Min();
+
+                case "pow":
+                    return new Pow();
+
                 default:
                     throw new Exception("unknown operation");
 
             }
-
-
         }
     }
 }

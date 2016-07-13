@@ -15,28 +15,43 @@ namespace kalc
 
         private void MathOperationForTwoArguments(object sender, EventArgs e)
         {
-            double argument1 = Convert.ToDouble(arg1.Text);
-            double argument2 = Convert.ToDouble(arg2.Text);
-            
-            String name = ((Button)sender).Name;
-            ITwoArgumentsCalculator calculator = TwoArgumentsCalculatorFactory.Create_calculator(name);
-            
-            double resultValue = calculator.Calculate(argument1, argument2);
-            
-            result.Text = resultValue.ToString();
+            try
+            {
+
+                double argument1 = Convert.ToDouble(arg1.Text);
+                double argument2 = Convert.ToDouble(arg2.Text);
+
+                String name = ((Button) sender).Name;
+                ITwoArgumentsCalculator calculator = TwoArgumentsCalculatorFactory.Create_calculator(name);
+
+                double resultValue = calculator.Calculate(argument1, argument2);
+
+                result.Text = resultValue.ToString();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ошибка: " + exc.Message);
+            }
         }
 
 
         private void MathOperationForOneArguments(object sender, EventArgs e)
         {
-            double argument1 = Convert.ToDouble(arg1.Text);
+            try
+            {
+                double argument1 = Convert.ToDouble(arg1.Text);
 
-            String name = ((Button)sender).Name;
-            IOneArgumentsCalculator calculator = OneArgumentFactory.Create_calculator(name);
+                String name = ((Button) sender).Name;
+                IOneArgumentsCalculator calculator = OneArgumentFactory.Create_calculator(name);
 
-            double resultValue = calculator.Calculate(argument1);
+                double resultValue = calculator.Calculate(argument1);
 
-            result.Text = resultValue.ToString();
+                result.Text = resultValue.ToString();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ошибка: " + exc.Message);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using kalc.CalculatorsWithTwoArguments;
+﻿using System;
+using kalc.CalculatorsWithTwoArguments;
 using NUnit.Framework;
 
 namespace kalc.Tests.CalculatorsWithTwoArguments
@@ -15,5 +16,13 @@ namespace kalc.Tests.CalculatorsWithTwoArguments
 
             Assert.AreEqual(expected, result);
         }
+
+        [Test]
+        public void DivisionByZeroTest()
+        {
+            ITwoArgumentsCalculator calculator = new Division();
+            Assert.Throws<Exception>(() => calculator.Calculate(1, 0));
+        }
+
     }
 }

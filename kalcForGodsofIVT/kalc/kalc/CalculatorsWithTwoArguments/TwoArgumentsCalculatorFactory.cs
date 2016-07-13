@@ -4,6 +4,11 @@ namespace kalc.CalculatorsWithTwoArguments
 {
     public static class TwoArgumentsCalculatorFactory
     {
+        /// <summary>
+        /// method create calculator object
+        /// </summary>
+        /// <param name="calculator_name"></param>
+        /// <returns></returns>
         public static ITwoArgumentsCalculator Create_calculator(String calculator_name)
         {
 

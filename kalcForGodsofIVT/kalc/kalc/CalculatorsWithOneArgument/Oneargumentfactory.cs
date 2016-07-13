@@ -4,6 +4,11 @@ namespace kalc.CalculatorsWithOneArgument
 {
     public static class OneArgumentFactory
     {
+        /// <summary>
+        /// method create calculator object
+        /// </summary>
+        /// <param name="calculator_name"></param>
+        /// <returns></returns>
         public static IOneArgumentsCalculator Create_calculator(String calculator_name)
         {
 

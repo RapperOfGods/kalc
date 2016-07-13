@@ -1,4 +1,5 @@
-﻿using kalc.CalculatorsWithTwoArguments;
+﻿using System;
+using kalc.CalculatorsWithTwoArguments;
 using NUnit.Framework;
 
 namespace kalc.Tests.CalculatorsWithTwoArguments
@@ -15,5 +16,14 @@ namespace kalc.Tests.CalculatorsWithTwoArguments
 
             Assert.AreEqual(expected, result);
         }
+
+        [TestCase(-7, 6)]
+        [TestCase(213, -6)]
+        public void LogForNaNTest(double first, double second)
+        {
+            ITwoArgumentsCalculator calculator = new Log();
+            Assert.Throws<Exception>(() => calculator.Calculate(first, second));
+        }
+
     }
 }

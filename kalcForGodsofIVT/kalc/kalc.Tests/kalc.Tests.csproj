@@ -46,6 +46,7 @@
     <Compile Include="CalculatorsWithOneArgument\CosecTests.cs" />
     <Compile Include="CalculatorsWithOneArgument\CosTests.cs" />
     <Compile Include="CalculatorsWithOneArgument\LnTests.cs" />
+    <Compile Include="CalculatorsWithOneArgument\OneArgumentFactoryTests.cs" />
     <Compile Include="CalculatorsWithOneArgument\SecTests.cs" />
     <Compile Include="CalculatorsWithOneArgument\SinTests.cs" />
     <Compile Include="CalculatorsWithOneArgument\SqrTests.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="CalculatorsWithTwoArguments\MultiplicationTests.cs" />
     <Compile Include="CalculatorsWithTwoArguments\PowTests.cs" />
     <Compile Include="CalculatorsWithTwoArguments\SubrucationTests.cs" />
+    <Compile Include="CalculatorsWithTwoArguments\TwoArgumentsCalculatorFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -30,12 +30,11 @@
         {
             this.multiplication = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
-            this.subraction = new System.Windows.Forms.Button();
+            this.subruction = new System.Windows.Forms.Button();
             this.addition = new System.Windows.Forms.Button();
             this.arg1 = new System.Windows.Forms.TextBox();
             this.arg2 = new System.Windows.Forms.TextBox();
             this.result = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.cos = new System.Windows.Forms.Button();
             this.sec = new System.Windows.Forms.Button();
             this.pow = new System.Windows.Forms.Button();
@@ -72,16 +71,16 @@
             this.division.UseVisualStyleBackColor = true;
             this.division.Click += new System.EventHandler(this.MathOperationForTwoArguments);
             // 
-            // subraction
+            // subruction
             // 
-            this.subraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.subraction.Location = new System.Drawing.Point(44, 166);
-            this.subraction.Name = "subraction";
-            this.subraction.Size = new System.Drawing.Size(46, 23);
-            this.subraction.TabIndex = 2;
-            this.subraction.Text = "-";
-            this.subraction.UseVisualStyleBackColor = true;
-            this.subraction.Click += new System.EventHandler(this.MathOperationForTwoArguments);
+            this.subruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.subruction.Location = new System.Drawing.Point(44, 166);
+            this.subruction.Name = "subruction";
+            this.subruction.Size = new System.Drawing.Size(46, 23);
+            this.subruction.TabIndex = 2;
+            this.subruction.Text = "-";
+            this.subruction.UseVisualStyleBackColor = true;
+            this.subruction.Click += new System.EventHandler(this.MathOperationForTwoArguments);
             // 
             // addition
             // 
@@ -114,15 +113,6 @@
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(274, 20);
             this.result.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // cos
             // 
@@ -261,12 +251,11 @@
             this.Controls.Add(this.max);
             this.Controls.Add(this.sec);
             this.Controls.Add(this.cos);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.arg2);
             this.Controls.Add(this.arg1);
             this.Controls.Add(this.addition);
-            this.Controls.Add(this.subraction);
+            this.Controls.Add(this.subruction);
             this.Controls.Add(this.division);
             this.Controls.Add(this.multiplication);
             this.Name = "MainForm";
@@ -280,12 +269,11 @@
 
         private System.Windows.Forms.Button multiplication;
         private System.Windows.Forms.Button division;
-        private System.Windows.Forms.Button subraction;
+        private System.Windows.Forms.Button subruction;
         private System.Windows.Forms.Button addition;
         private System.Windows.Forms.TextBox arg1;
         private System.Windows.Forms.TextBox arg2;
         private System.Windows.Forms.TextBox result;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cos;
         private System.Windows.Forms.Button sec;
         private System.Windows.Forms.Button pow;

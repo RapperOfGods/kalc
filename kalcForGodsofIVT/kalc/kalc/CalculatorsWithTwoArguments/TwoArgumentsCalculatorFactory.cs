@@ -18,7 +18,7 @@ namespace kalc.CalculatorsWithTwoArguments
                 case "multiplication":
                     return new Multiplication();
 
-                case "subraction":
+                case "subruction":
                     return new Subruction();
 
                 case "log":

@@ -72,6 +72,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorsWithTwoArguments\Subruction.cs" />
     <Compile Include="CalculatorsWithTwoArguments\TwoArgumentsCalculatorFactory.cs" />
+    <Compile Include="SortArray\GnomeSort.cs" />
+    <Compile Include="SortArray\ISortArray.cs" />
+    <Compile Include="SortArray\QuickSort.cs" />
+    <Compile Include="SortArray\SortFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

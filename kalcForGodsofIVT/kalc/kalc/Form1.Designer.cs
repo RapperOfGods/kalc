@@ -47,6 +47,9 @@
             this.ln = new System.Windows.Forms.Button();
             this.cosec = new System.Windows.Forms.Button();
             this.sin = new System.Windows.Forms.Button();
+            this.gnomeSort = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.quickSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // multiplication
@@ -234,11 +237,41 @@
             this.sin.UseVisualStyleBackColor = true;
             this.sin.Click += new System.EventHandler(this.MathOperationForOneArguments);
             // 
+            // gnomeSort
+            // 
+            this.gnomeSort.Location = new System.Drawing.Point(359, 96);
+            this.gnomeSort.Name = "gnomeSort";
+            this.gnomeSort.Size = new System.Drawing.Size(75, 23);
+            this.gnomeSort.TabIndex = 20;
+            this.gnomeSort.Text = "gnomeSort";
+            this.gnomeSort.UseVisualStyleBackColor = true;
+            this.gnomeSort.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(359, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(341, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // quickSort
+            // 
+            this.quickSort.Location = new System.Drawing.Point(455, 96);
+            this.quickSort.Name = "quickSort";
+            this.quickSort.Size = new System.Drawing.Size(75, 23);
+            this.quickSort.TabIndex = 22;
+            this.quickSort.Text = "quickSort";
+            this.quickSort.UseVisualStyleBackColor = true;
+            this.quickSort.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 291);
+            this.ClientSize = new System.Drawing.Size(768, 280);
+            this.Controls.Add(this.quickSort);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.gnomeSort);
             this.Controls.Add(this.exp);
             this.Controls.Add(this.ln);
             this.Controls.Add(this.cosec);
@@ -286,6 +319,9 @@
         private System.Windows.Forms.Button ln;
         private System.Windows.Forms.Button cosec;
         private System.Windows.Forms.Button sin;
+        private System.Windows.Forms.Button gnomeSort;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button quickSort;
     }
 }
 

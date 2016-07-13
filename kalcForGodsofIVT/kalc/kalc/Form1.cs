@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using kalc.CalculatorsWithOneArgument;
 using kalc.CalculatorsWithTwoArguments;
+using kalc.SortArray;
 
 namespace kalc
 {
@@ -53,5 +54,38 @@ namespace kalc
                 MessageBox.Show("Ошибка: " + exc.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] stringArray = textBox1.Text.Split(' ');
+                int[] intArray = new int[stringArray.Length];
+
+                for (int i = 0; i < stringArray.Length; i++)
+                {
+                    intArray[i] = Convert.ToInt32(stringArray[i]);
+                }
+
+                string name = ((Button) sender).Name;
+                int[] resultArray = SortFactory.getSort(name).sort(intArray);
+                string resultString = "";
+
+                for (int i = 0; i < resultArray.Length; i++)
+                {
+                    resultString += resultArray[i].ToString() + " ";
+                }
+                result.Text = resultString;
+
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show("ERROR " + exp.Message);
+            }
+        }
     }
+
+
+
+
 }
